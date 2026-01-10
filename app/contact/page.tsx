@@ -52,13 +52,12 @@ export default function Contact() {
       {/* Hero Section */}
       <Section className="bg-white border-b border-gray-200">
         <Container>
-          <div className="text-center max-w-3xl mx-auto">
-            <h1 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
+          <div className="max-w-4xl mx-auto pt-16 pb-12">
+            <h1 className="text-5xl font-semibold text-gray-900 mb-4 tracking-tight">
               도입 문의
             </h1>
-            <p className="text-xl text-gray-600">
-              언넝 플랫폼 도입에 관심이 있으신가요?<br />
-              전문 상담을 통해 최적의 솔루션을 제안해드립니다.
+            <p className="text-lg text-gray-600 leading-relaxed">
+              언넝 플랫폼 도입 상담 및 솔루션 컨설팅을 제공합니다.
             </p>
           </div>
         </Container>
@@ -88,7 +87,7 @@ export default function Contact() {
                     required
                     value={formData.name}
                     onChange={handleChange}
-                    className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary-500 focus:border-transparent outline-none transition"
+                    className="w-full px-4 py-3 border border-gray-300 rounded-sm focus:ring-2 focus:ring-gray-500 focus:border-gray-500 outline-none transition"
                     placeholder="홍길동"
                   />
                 </div>
@@ -107,7 +106,7 @@ export default function Contact() {
                     required
                     value={formData.company}
                     onChange={handleChange}
-                    className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary-500 focus:border-transparent outline-none transition"
+                    className="w-full px-4 py-3 border border-gray-300 rounded-sm focus:ring-2 focus:ring-gray-500 focus:border-gray-500 outline-none transition"
                     placeholder="주식회사 예시"
                   />
                 </div>
@@ -126,7 +125,7 @@ export default function Contact() {
                     required
                     value={formData.email}
                     onChange={handleChange}
-                    className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary-500 focus:border-transparent outline-none transition"
+                    className="w-full px-4 py-3 border border-gray-300 rounded-sm focus:ring-2 focus:ring-gray-500 focus:border-gray-500 outline-none transition"
                     placeholder="example@company.com"
                   />
                 </div>
@@ -145,7 +144,7 @@ export default function Contact() {
                     required
                     value={formData.phone}
                     onChange={handleChange}
-                    className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary-500 focus:border-transparent outline-none transition"
+                    className="w-full px-4 py-3 border border-gray-300 rounded-sm focus:ring-2 focus:ring-gray-500 focus:border-gray-500 outline-none transition"
                     placeholder="010-1234-5678"
                   />
                 </div>
@@ -192,13 +191,13 @@ export default function Contact() {
                 </div>
 
                 {submitStatus === 'success' && (
-                  <div className="bg-green-50 border border-green-200 text-green-800 px-4 py-3 rounded-lg">
+                  <div className="bg-gray-50 border border-gray-300 text-gray-900 px-4 py-3 rounded-sm">
                     문의가 성공적으로 접수되었습니다. 빠른 시일 내에 연락드리겠습니다.
                   </div>
                 )}
 
                 {submitStatus === 'error' && (
-                  <div className="bg-red-50 border border-red-200 text-red-800 px-4 py-3 rounded-lg">
+                  <div className="bg-gray-50 border border-gray-300 text-gray-900 px-4 py-3 rounded-sm">
                     문의 접수 중 오류가 발생했습니다. 다시 시도해주세요.
                   </div>
                 )}
@@ -216,18 +215,18 @@ export default function Contact() {
 
             {/* Contact Info */}
             <div>
-              <h2 className="text-2xl font-bold text-gray-900 mb-6">
+              <h2 className="text-2xl font-semibold text-gray-900 mb-6 tracking-tight">
                 연락처 정보
               </h2>
               <div className="space-y-6">
-                <div className="bg-gray-50 rounded-lg p-6">
+                <div className="border border-gray-200 p-6">
                   <h3 className="text-lg font-semibold text-gray-900 mb-4">
                     직접 연락
                   </h3>
-                  <div className="space-y-3 text-gray-700">
+                  <div className="space-y-4 text-gray-600">
                     <div className="flex items-start">
                       <svg
-                        className="w-5 h-5 text-primary-600 mr-3 mt-1 flex-shrink-0"
+                        className="w-5 h-5 text-gray-400 mr-3 mt-1 flex-shrink-0"
                         fill="none"
                         stroke="currentColor"
                         viewBox="0 0 24 24"
@@ -240,10 +239,10 @@ export default function Contact() {
                         />
                       </svg>
                       <div>
-                        <div className="font-medium">이메일</div>
+                        <div className="font-medium text-gray-900">이메일</div>
                         <a
                           href="mailto:contact@unnung.com"
-                          className="text-primary-600 hover:underline"
+                          className="text-gray-600 hover:text-gray-900"
                         >
                           contact@unnung.com
                         </a>
@@ -251,7 +250,7 @@ export default function Contact() {
                     </div>
                     <div className="flex items-start">
                       <svg
-                        className="w-5 h-5 text-primary-600 mr-3 mt-1 flex-shrink-0"
+                        className="w-5 h-5 text-gray-400 mr-3 mt-1 flex-shrink-0"
                         fill="none"
                         stroke="currentColor"
                         viewBox="0 0 24 24"
@@ -264,10 +263,10 @@ export default function Contact() {
                         />
                       </svg>
                       <div>
-                        <div className="font-medium">전화</div>
+                        <div className="font-medium text-gray-900">전화</div>
                         <a
                           href="tel:02-1234-5678"
-                          className="text-primary-600 hover:underline"
+                          className="text-gray-600 hover:text-gray-900"
                         >
                           02-1234-5678
                         </a>
@@ -275,7 +274,7 @@ export default function Contact() {
                     </div>
                     <div className="flex items-start">
                       <svg
-                        className="w-5 h-5 text-primary-600 mr-3 mt-1 flex-shrink-0"
+                        className="w-5 h-5 text-gray-400 mr-3 mt-1 flex-shrink-0"
                         fill="none"
                         stroke="currentColor"
                         viewBox="0 0 24 24"
@@ -294,31 +293,30 @@ export default function Contact() {
                         />
                       </svg>
                       <div>
-                        <div className="font-medium">주소</div>
+                        <div className="font-medium text-gray-900">주소</div>
                         <div>서울특별시 강남구 테헤란로 123</div>
                       </div>
                     </div>
                   </div>
                 </div>
 
-                <div className="bg-primary-50 rounded-lg p-6">
+                <div className="border border-gray-200 p-6">
                   <h3 className="text-lg font-semibold text-gray-900 mb-4">
                     응답 시간
                   </h3>
-                  <p className="text-gray-700">
-                    문의 주신 내용에 대해서는 영업일 기준 1~2일 이내에
-                    답변드리겠습니다. 긴급한 문의사항은 전화로 연락주시기
-                    바랍니다.
+                  <p className="text-gray-600 leading-relaxed">
+                    문의 주신 내용에 대해서는 영업일 기준 1~2일 이내에 답변을 제공합니다. 
+                    긴급한 문의사항은 전화로 연락 부탁드립니다.
                   </p>
                 </div>
 
-                <div className="bg-gray-50 rounded-lg p-6">
+                <div className="border border-gray-200 p-6">
                   <h3 className="text-lg font-semibold text-gray-900 mb-4">
                     제품 데모 및 상담
                   </h3>
-                  <p className="text-gray-700 mb-4">
-                    제품 데모나 상세 상담이 필요하신 경우, 문의 양식에 '제품
-                    데모 요청'을 명시해주시면 전문 담당자가 직접 연락드리겠습니다.
+                  <p className="text-gray-600 leading-relaxed">
+                    제품 데모 또는 상세 상담이 필요한 경우, 문의 양식에 '제품 데모 요청'을 
+                    명시해주시면 담당자가 연락드립니다.
                   </p>
                 </div>
               </div>

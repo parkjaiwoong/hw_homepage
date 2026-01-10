@@ -7,8 +7,8 @@ import { useState } from 'react'
 const navItems = [
   { href: '/', label: 'Home' },
   { href: '/products', label: 'Products' },
-  { href: '/technology', label: 'Technology' },
-  { href: '/about', label: 'About' },
+  { href: '/solutions', label: 'Solutions' },
+  { href: '/company', label: 'Company' },
   { href: '/contact', label: 'Contact' },
 ]
 
@@ -19,9 +19,9 @@ export default function Header() {
   return (
     <header className="bg-white border-b border-gray-200 sticky top-0 z-50">
       <nav className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex justify-between items-center h-16">
+        <div className="flex justify-between items-center h-20">
           <Link href="/" className="flex items-center">
-            <span className="text-2xl font-bold text-gray-900">언넝</span>
+            <span className="text-xl font-semibold text-gray-900 tracking-tight">언넝</span>
           </Link>
 
           {/* Desktop Navigation */}
@@ -32,7 +32,7 @@ export default function Header() {
                 href={item.href}
                 className={`text-sm font-medium transition-colors ${
                   pathname === item.href
-                    ? 'text-primary-600 border-b-2 border-primary-600'
+                    ? 'text-gray-900 border-b-2 border-gray-900'
                     : 'text-gray-600 hover:text-gray-900'
                 }`}
               >
@@ -73,9 +73,9 @@ export default function Header() {
                 <Link
                   key={item.href}
                   href={item.href}
-                  className={`px-3 py-2 rounded-md text-sm font-medium ${
+                  className={`px-3 py-2 rounded-sm text-sm font-medium ${
                     pathname === item.href
-                      ? 'bg-primary-50 text-primary-600'
+                      ? 'bg-gray-100 text-gray-900'
                       : 'text-gray-600 hover:bg-gray-50'
                   }`}
                   onClick={() => setMobileMenuOpen(false)}

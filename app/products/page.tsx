@@ -7,28 +7,28 @@ const products = [
   {
     id: 'unnung-quick',
     name: '언넝 퀵',
-    description: '실시간 배차가 가능한 퀵서비스 플랫폼',
-    problem: '전화 기반 배차로 인한 지연과 비효율성',
-    solution: '실시간 플랫폼 기반 즉시 배차 시스템',
-    effect: '배차 시간 90% 단축, 운영 비용 30% 절감',
+    description: '실시간 배차 시스템을 제공하는 퀵서비스 플랫폼',
+    problem: '전화 기반 배차 방식으로 인한 처리 지연 및 관리의 어려움',
+    solution: '실시간 플랫폼 기반 자동 배차 시스템 구축',
+    effect: '배차 처리 시간 단축 및 운영 비용 절감',
     href: '/products/unnung-quick',
   },
   {
     id: 'unnung-order',
     name: '언넝 오더',
-    description: '주문 및 정산 자동화 시스템',
-    problem: '수기 주문 관리와 복잡한 정산 프로세스',
-    solution: '통합 주문 관리 및 자동 정산 시스템',
-    effect: '주문 처리 시간 50% 단축, 정산 오류 제로',
+    description: '주문 및 정산 프로세스 자동화 솔루션',
+    problem: '수기 주문 관리 및 복잡한 정산 프로세스로 인한 비효율',
+    solution: '통합 주문 관리 및 자동 정산 시스템 도입',
+    effect: '주문 처리 효율 향상 및 정산 정확도 개선',
     href: '/products/unnung-order',
   },
   {
     id: 'unnung-erp',
     name: '언넝 ERP',
     description: '통합 업무 관리 시스템',
-    problem: '여러 시스템 간의 정보 단절과 데이터 불일치',
-    solution: '통합 ERP 시스템으로 업무 프로세스 일원화',
-    effect: '업무 효율성 향상, 데이터 정합성 확보 (2025년 출시 예정)',
+    problem: '여러 시스템 간 정보 단절 및 데이터 불일치로 인한 운영 복잡성',
+    solution: '통합 ERP 시스템을 통한 업무 프로세스 일원화',
+    effect: '업무 효율성 향상 및 데이터 정합성 확보 (2025년 출시 예정)',
     href: '#',
     comingSoon: true,
   },
@@ -40,11 +40,11 @@ export default function Products() {
       {/* Hero Section */}
       <Section className="bg-white border-b border-gray-200">
         <Container>
-          <div className="text-center max-w-3xl mx-auto">
-            <h1 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
+          <div className="max-w-4xl mx-auto pt-16 pb-12">
+            <h1 className="text-5xl font-semibold text-gray-900 mb-4 tracking-tight">
               제품
             </h1>
-            <p className="text-xl text-gray-600">
+            <p className="text-lg text-gray-600">
               업무 효율성을 높이는 플랫폼 제품군
             </p>
           </div>
@@ -54,11 +54,11 @@ export default function Products() {
       {/* Products List */}
       <Section className="bg-white">
         <Container>
-          <div className="space-y-16">
+          <div className="space-y-24 py-16">
             {products.map((product) => (
               <div
                 key={product.id}
-                className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center"
+                className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-start"
               >
                 <div>
                   <div className="flex items-center gap-3 mb-4">
@@ -75,26 +75,26 @@ export default function Products() {
                     {product.description}
                   </p>
 
-                  <div className="space-y-6 mb-8">
-                    <div>
-                      <h3 className="text-sm font-semibold text-red-600 uppercase tracking-wide mb-2">
+                  <div className="space-y-8 mb-10">
+                    <div className="border-l-2 border-gray-300 pl-4">
+                      <h3 className="text-sm font-semibold text-gray-900 uppercase tracking-wide mb-2">
                         문제
                       </h3>
-                      <p className="text-gray-700">{product.problem}</p>
+                      <p className="text-gray-600 leading-relaxed">{product.problem}</p>
                     </div>
 
-                    <div>
-                      <h3 className="text-sm font-semibold text-primary-600 uppercase tracking-wide mb-2">
+                    <div className="border-l-2 border-gray-300 pl-4">
+                      <h3 className="text-sm font-semibold text-gray-900 uppercase tracking-wide mb-2">
                         해결
                       </h3>
-                      <p className="text-gray-700">{product.solution}</p>
+                      <p className="text-gray-600 leading-relaxed">{product.solution}</p>
                     </div>
 
-                    <div>
-                      <h3 className="text-sm font-semibold text-green-600 uppercase tracking-wide mb-2">
+                    <div className="border-l-2 border-gray-900 pl-4">
+                      <h3 className="text-sm font-semibold text-gray-900 uppercase tracking-wide mb-2">
                         효과
                       </h3>
-                      <p className="text-gray-700 font-medium">
+                      <p className="text-gray-900 font-medium leading-relaxed">
                         {product.effect}
                       </p>
                     </div>
@@ -102,28 +102,13 @@ export default function Products() {
 
                   {!product.comingSoon && (
                     <Button href={product.href} variant="primary">
-                      자세히 알아보기
+                      상세 정보
                     </Button>
                   )}
                 </div>
 
-                <div className="bg-gray-100 rounded-lg aspect-video flex items-center justify-center">
-                  <div className="text-center text-gray-400">
-                    <svg
-                      className="w-24 h-24 mx-auto mb-4"
-                      fill="none"
-                      stroke="currentColor"
-                      viewBox="0 0 24 24"
-                    >
-                      <path
-                        strokeLinecap="round"
-                        strokeLinejoin="round"
-                        strokeWidth={1.5}
-                        d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"
-                      />
-                    </svg>
-                    <p className="text-sm">{product.name} 이미지</p>
-                  </div>
+                <div className="bg-gray-50 border border-gray-200 rounded-sm aspect-video flex items-center justify-center">
+                  <p className="text-sm text-gray-400 font-medium">{product.name}</p>
                 </div>
               </div>
             ))}
@@ -131,19 +116,35 @@ export default function Products() {
         </Container>
       </Section>
 
-      {/* CTA Section */}
-      <Section className="bg-gray-50">
+      {/* Related Links */}
+      <Section className="bg-gray-50 border-t border-gray-200">
         <Container>
-          <div className="text-center max-w-3xl mx-auto">
-            <h2 className="text-3xl font-bold text-gray-900 mb-4">
-              맞춤형 솔루션이 필요하신가요?
-            </h2>
-            <p className="text-lg text-gray-600 mb-8">
-              전문 상담을 통해 최적의 제품을 추천해드립니다.
-            </p>
-            <Button href="/contact" variant="primary">
-              도입 문의하기
-            </Button>
+          <div className="max-w-6xl mx-auto py-16">
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-12">
+              <div>
+                <h2 className="text-2xl font-semibold text-gray-900 mb-4 tracking-tight">
+                  솔루션
+                </h2>
+                <p className="text-gray-600 mb-6 leading-relaxed">
+                  제품의 기술적 세부사항과 솔루션 아키텍처를 확인하세요.
+                </p>
+                <Button href="/solutions" variant="outline">
+                  솔루션 보기
+                </Button>
+              </div>
+
+              <div>
+                <h2 className="text-2xl font-semibold text-gray-900 mb-4 tracking-tight">
+                  도입 문의
+                </h2>
+                <p className="text-gray-600 mb-6 leading-relaxed">
+                  필요에 맞는 솔루션 도입을 위한 상담을 제공합니다.
+                </p>
+                <Button href="/contact" variant="primary">
+                  문의하기
+                </Button>
+              </div>
+            </div>
           </div>
         </Container>
       </Section>

@@ -7,8 +7,8 @@ export default function Footer() {
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
           <div>
             <h3 className="text-white text-lg font-semibold mb-4">언넝</h3>
-            <p className="text-sm">
-              업무를 더 빠르고 단순하게 만드는 플랫폼 회사
+            <p className="text-sm text-gray-400">
+              업무 효율성 향상과 운영 최적화를 위한 플랫폼 솔루션 제공
             </p>
           </div>
 
@@ -34,16 +34,21 @@ export default function Footer() {
           </div>
 
           <div>
-            <h4 className="text-white text-sm font-semibold mb-4">연락처</h4>
+            <h4 className="text-white text-sm font-semibold mb-4">회사</h4>
             <ul className="space-y-2 text-sm">
               <li>
-                <Link href="/contact" className="hover:text-white transition-colors">
-                  도입 문의
+                <Link href="/company" className="hover:text-white transition-colors">
+                  회사 소개
                 </Link>
               </li>
               <li>
-                <Link href="/about" className="hover:text-white transition-colors">
-                  회사 소개
+                <Link href="/solutions" className="hover:text-white transition-colors">
+                  솔루션
+                </Link>
+              </li>
+              <li>
+                <Link href="/contact" className="hover:text-white transition-colors">
+                  도입 문의
                 </Link>
               </li>
             </ul>

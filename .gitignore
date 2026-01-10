@@ -30,6 +30,11 @@ yarn-error.log*
 # vercel
 .vercel
 
+# 작업 파일 (민감한 정보 포함)
+*.txt
+!README.txt
+!LICENSE.txt
+
 # typescript
 *.tsbuildinfo
 next-env.d.ts
