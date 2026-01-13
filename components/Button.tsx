@@ -19,11 +19,11 @@ export default function Button({
 
   const variants = {
     primary:
-      'bg-gray-900 text-white hover:bg-gray-800 focus:ring-gray-500 rounded-sm',
+      'bg-brand-600 text-white hover:bg-brand-500 focus:ring-brand-500 shadow-lg shadow-brand-500/30 border border-transparent rounded-lg',
     secondary:
-      'bg-gray-700 text-white hover:bg-gray-600 focus:ring-gray-500 rounded-sm',
+      'bg-brand-50 text-brand-700 hover:bg-brand-100 focus:ring-brand-500 border border-transparent rounded-lg',
     outline:
-      'border border-gray-300 text-gray-700 hover:bg-gray-50 focus:ring-gray-500 rounded-sm',
+      'border-2 border-slate-200 text-slate-700 hover:border-brand-600 hover:text-brand-600 focus:ring-brand-500 bg-transparent rounded-lg',
   }
 
   const combinedClassName = `${baseStyles} ${variants[variant]} ${className}`
