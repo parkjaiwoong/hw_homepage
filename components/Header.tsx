@@ -17,11 +17,11 @@ export default function Header() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false)
 
   return (
-    <header className="bg-white border-b border-gray-200 sticky top-0 z-50">
+    <header className="bg-white/90 backdrop-blur-lg border-b border-slate-200 sticky top-0 z-50 transition-all duration-300">
       <nav className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center h-20">
-          <Link href="/" className="flex items-center">
-            <span className="text-xl font-semibold text-gray-900 tracking-tight">언넝</span>
+          <Link href="/" className="flex items-center group">
+            <span className="text-xl font-bold bg-gradient-to-r from-brand-600 to-accent-600 bg-clip-text text-transparent transform group-hover:scale-105 transition-transform duration-200">언넝</span>
           </Link>
 
           {/* Desktop Navigation */}
@@ -30,11 +30,10 @@ export default function Header() {
               <Link
                 key={item.href}
                 href={item.href}
-                className={`text-sm font-medium transition-colors ${
-                  pathname === item.href
-                    ? 'text-gray-900 border-b-2 border-gray-900'
-                    : 'text-gray-600 hover:text-gray-900'
-                }`}
+                className={`text-sm font-medium transition-all duration-200 ${pathname === item.href
+                    ? 'text-brand-600 font-bold'
+                    : 'text-slate-500 hover:text-brand-600'
+                  }`}
               >
                 {item.label}
               </Link>
@@ -73,11 +72,10 @@ export default function Header() {
                 <Link
                   key={item.href}
                   href={item.href}
-                  className={`px-3 py-2 rounded-sm text-sm font-medium ${
-                    pathname === item.href
+                  className={`px-3 py-2 rounded-sm text-sm font-medium ${pathname === item.href
                       ? 'bg-gray-100 text-gray-900'
                       : 'text-gray-600 hover:bg-gray-50'
-                  }`}
+                    }`}
                   onClick={() => setMobileMenuOpen(false)}
                 >
                   {item.label}

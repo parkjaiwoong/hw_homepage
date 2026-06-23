@@ -1,17 +1,8 @@
-'use client'
-
-import { useEffect, useState } from 'react'
 import Container from '@/components/Container'
 import Section from '@/components/Section'
 import Button from '@/components/Button'
 
 export default function Home() {
-  const [isLoaded, setIsLoaded] = useState(false)
-
-  useEffect(() => {
-    setIsLoaded(true)
-  }, [])
-
   return (
     <>
       {/* Hero Section - Colorful & Dense B2B Design */}
@@ -44,7 +35,7 @@ export default function Home() {
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-20 items-center">
 
               {/* Left: Text Content */}
-              <div className={`flex flex-col justify-center transition-all duration-1000 ease-out ${isLoaded ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
+              <div className="flex flex-col justify-center animate-fade-in-up">
 
                 {/* Badge */}
                 <div className="inline-flex self-start mb-8 animate-fade-in-up" style={{ animationDelay: '0.1s' }}>
@@ -90,7 +81,7 @@ export default function Home() {
               </div>
 
               {/* Right: Visual Element (Glass Cards) */}
-              <div className={`hidden lg:block relative ${isLoaded ? 'opacity-100 scale-100' : 'opacity-0 scale-95'} transition-all duration-1000 delay-300`}>
+              <div className="hidden lg:block relative animate-fade-in-up" style={{ animationDelay: '0.3s' }}>
                 <div className="relative w-full aspect-square max-w-lg mx-auto">
 
                   {/* Abstract Central Visual */}
